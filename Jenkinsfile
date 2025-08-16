@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+	    	deleteDir()
                 git branch: 'dev',
                     credentialsId: 'github-credentials',
                     url: 'https://github.com/Sandhana-Krishnan-S/CI-CD-learn.git'
